@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "zuyenzamora": {
+    "AyelenFernandez": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/zuyenzamora",
+            "outputPath": "dist/ayelen-fernandez",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "zuyenzamora:build:production"
+              "browserTarget": "AyelenFernandez:build:production"
             },
             "development": {
-              "browserTarget": "zuyenzamora:build:development"
+              "browserTarget": "AyelenFernandez:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "zuyenzamora:build"
+            "browserTarget": "AyelenFernandez:build"
           }
         },
         "test": {
