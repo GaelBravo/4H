@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "axelXolio": {
+    "StephannyGrasySacaulaR": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/axel-xolio",
+            "outputPath": "dist/stephanny-grasy-sacaula-r",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "axelXolio:build:production"
+              "browserTarget": "StephannyGrasySacaulaR:build:production"
             },
             "development": {
-              "browserTarget": "axelXolio:build:development"
+              "browserTarget": "StephannyGrasySacaulaR:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "axelXolio:build"
+            "browserTarget": "StephannyGrasySacaulaR:build"
           }
         },
         "test": {
@@ -94,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "c592fc74-02cc-44a5-bd8e-4a22589081ef"
   }
 }
