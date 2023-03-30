@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AdolfoAltamirano": {
+    "StephannyGrasySacaulaR": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/adolfo-altamirano",
+            "outputPath": "dist/stephanny-grasy-sacaula-r",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,12 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -63,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AdolfoAltamirano:build:production"
+              "browserTarget": "StephannyGrasySacaulaR:build:production"
             },
             "development": {
-              "browserTarget": "AdolfoAltamirano:build:development"
+              "browserTarget": "StephannyGrasySacaulaR:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AdolfoAltamirano:build"
+            "browserTarget": "StephannyGrasySacaulaR:build"
           }
         },
         "test": {
@@ -97,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
