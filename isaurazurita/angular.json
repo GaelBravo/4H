@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AyelenFernandez": {
+    "isaurazurita": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ayelen-fernandez",
+            "outputPath": "dist/isaurazurita",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -26,10 +26,10 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/boostrap/dist/css/boostrap.min.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/boostrap/dist/js/boostrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AyelenFernandez:build:production"
+              "browserTarget": "isaurazurita:build:production"
             },
             "development": {
-              "browserTarget": "AyelenFernandez:build:development"
+              "browserTarget": "isaurazurita:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AyelenFernandez:build"
+            "browserTarget": "isaurazurita:build"
           }
         },
         "test": {
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "e953dd98-4d1b-4027-8926-ddaad91da12f"
+    "analytics": false
   }
 }

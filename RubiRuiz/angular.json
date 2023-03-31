@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AyelenFernandez": {
+    "RubiRuiz": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ayelen-fernandez",
+            "outputPath": "dist/rubi-ruiz",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,12 +25,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -63,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AyelenFernandez:build:production"
+              "browserTarget": "RubiRuiz:build:production"
             },
             "development": {
-              "browserTarget": "AyelenFernandez:build:development"
+              "browserTarget": "RubiRuiz:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AyelenFernandez:build"
+            "browserTarget": "RubiRuiz:build"
           }
         },
         "test": {
@@ -97,8 +94,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "e953dd98-4d1b-4027-8926-ddaad91da12f"
   }
 }

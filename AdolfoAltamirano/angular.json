@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AyelenFernandez": {
+    "AdolfoAltamirano": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ayelen-fernandez",
+            "outputPath": "dist/adolfo-altamirano",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -63,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "AyelenFernandez:build:production"
+              "browserTarget": "AdolfoAltamirano:build:production"
             },
             "development": {
-              "browserTarget": "AyelenFernandez:build:development"
+              "browserTarget": "AdolfoAltamirano:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -74,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "AyelenFernandez:build"
+            "browserTarget": "AdolfoAltamirano:build"
           }
         },
         "test": {
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "e953dd98-4d1b-4027-8926-ddaad91da12f"
+    "analytics": false
   }
 }
