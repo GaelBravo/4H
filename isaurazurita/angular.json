@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "axelXolio": {
+    "isaurazurita": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/axel-xolio",
+            "outputPath": "dist/isaurazurita",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/boostrap/dist/css/boostrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/boostrap/dist/js/boostrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -60,10 +63,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "axelXolio:build:production"
+              "browserTarget": "isaurazurita:build:production"
             },
             "development": {
-              "browserTarget": "axelXolio:build:development"
+              "browserTarget": "isaurazurita:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +74,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "axelXolio:build"
+            "browserTarget": "isaurazurita:build"
           }
         },
         "test": {
@@ -96,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "c592fc74-02cc-44a5-bd8e-4a22589081ef"
+    "analytics": false
   }
 }
