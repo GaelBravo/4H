@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "franciscovelazquez": {
+    "WilliamBravo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/franciscovelazquez",
+            "outputPath": "dist/william-bravo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "franciscovelazquez:build:production"
+              "browserTarget": "WilliamBravo:build:production"
             },
             "development": {
-              "browserTarget": "franciscovelazquez:build:development"
+              "browserTarget": "WilliamBravo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "franciscovelazquez:build"
+            "browserTarget": "WilliamBravo:build"
           }
         },
         "test": {
@@ -88,14 +88,17 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap.min.css" 
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/boostrap/dist/js/boostrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "18da6a69-dc54-42a3-ba98-85b5be221bc1"
   }
 }
