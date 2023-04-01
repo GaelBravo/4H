@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { EjerciciosComponent } from './ejercicios/ejercicios.component';
 
 const routes: Routes = [
-  {path:'eje1',component:eje1Component}
+  {path:'eje1',component:EjerciciosComponent}
 ];
 
 @NgModule({
