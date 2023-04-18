@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class Ejer1Component {
 
+  protected title:string = 'Fundacion Acevedo'
 }
