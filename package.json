@@ -1,6 +1,10 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "@angular/cli": "^15.2.4",
     "@angular/core": "^15.2.7"
+=======
+    "bootstrap": "^5.2.3"
+>>>>>>> 1bff2325f1e8aa649621dd3cd44e7b3d3c8331dd
   }
 }
