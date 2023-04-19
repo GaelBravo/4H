@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './eje1.component.html',
   styleUrls: ['./eje1.component.css']
 })
-export class Eje1Component {
-
+export class Eje1Component { 
+protected title: string= "Empresa de Zuyen a SA de cv"
 }
