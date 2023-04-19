@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Eje1Component {
   protected title:string ='empresa de Francisco SA de CV';
+  protected email:string ='';
+  protected password:string ='';
 
 }
