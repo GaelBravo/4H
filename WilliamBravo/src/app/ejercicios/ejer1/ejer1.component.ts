@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
 export class Ejer1Component {
 
 protected title:string = 'Empresa de William SA de CV';
+protected email:string = '';
+protected password:string = '';
+
 
 }
