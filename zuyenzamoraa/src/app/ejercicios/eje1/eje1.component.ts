@@ -10,12 +10,13 @@ protected title: string= "Empresa de Zuyen a SA de cv"
 protected email: string = '';
 protected password: string = '';
 validar(){
-  if(this.email=="zuyen.com" && this.password=="1234"){
+  if(this.email=="zuyen@gmail.com" && this.password=="1"){
     alert("bienvenido al sistema " + this.title);
   }
-  else{
-    alert("El usuario o la contraseña es incorrecta :C");
+  else {
+    alert("Incorrecto ");
   }
+
 }
 }
 
