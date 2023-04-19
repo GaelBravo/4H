@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./eje1.component.css']
 })
 export class Eje1Component {
+  protected title:string ="Empresa de Kevin Uriel SA de CV"
 
 }
