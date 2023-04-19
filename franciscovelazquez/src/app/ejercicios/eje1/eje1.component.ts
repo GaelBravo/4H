@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./eje1.component.css']
 })
 export class Eje1Component {
+  protected title:string ='empresa de Francisco SA de CV';
 
 }
