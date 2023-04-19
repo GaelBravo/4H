@@ -10,4 +10,14 @@ export class Eje1Component {
   protected title:string = 'Empresa de Alfonso SA de CV';
   protected email:string = '';
   protected password:string = '';
+
+  validar(){
+    if(this.email=="Alfonsotp.com" && this.password=="1234"){
+      alert("Bienvenido al Sistema "+ this.title);
+    }
+    else{
+      alert("El usuario y la contraseña no son correctos :(");
+    }
+  }
+
 }
