@@ -10,4 +10,13 @@ export class Eje1Component {
   protected email:string = '';
   protected password: string = '';
 
+  validar(){
+    if(this.email=="angeldejesus@gmail.com" && this.password=="angel1234"){
+      alert("Bienvenido al sistema " + this.title)
+    }
+    else{
+      alert("Usuario y contraseña incorrecto");
+    }
+  }
+
 }
