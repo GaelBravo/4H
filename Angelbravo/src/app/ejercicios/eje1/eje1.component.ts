@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class Eje1Component {
   protected title:string = 'Empresa de Angel de Jesus';
+  protected email:string = '';
+  protected password: string = '';
 
 }
