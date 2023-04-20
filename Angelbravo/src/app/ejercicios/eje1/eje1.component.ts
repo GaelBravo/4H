@@ -9,14 +9,20 @@ export class Eje1Component {
   protected title:string = 'Empresa de Angel de Jesus';
   protected email:string = '';
   protected password: string = '';
+  protected usuarios=[
+    {usr:"ernesto@l.com",psw:"1234"},
+    {usr:"rubi@l.com",psw:"12345"},
+    {usr:"murcia@l.com",psw:"123456"}
+  ];
 
   validar(){
-    if(this.email=="angeldejesus@gmail.com" && this.password=="angel1234"){
-      alert("Bienvenido al sistema " + this.title)
+    for(let i=0; i<this.usuarios.length; i++){
+      if(this.email==this.usuarios[i].usr && this.password==this.usuarios[i].psw){
+        alert("Bienvenido al sistema " + this.title)
+        return;
+      }
     }
-    else{
-      alert("Usuario y contraseña incorrecto");
-    }
+    
   }
 
 }
