@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-eje1',
@@ -14,12 +15,15 @@ export class Eje1Component {
     {usr:"ernesto@l.com", psw:"1234", nombre:"Ernesto"},
     {usr:"rubi@l.com", psw:"12345", nombre:"Rubi"}
   ];
+  constructor(private rutas:Router){ }
 
 
   validar(){
     for(let i=0; i<this.usuarios.length; i++){
       if(this.email==this.usuarios[i].usr && this.password==this.usuarios[i].psw){
-        alert("Sea bienvenido al sistema de la "+ this.title)
+        alert(this.usuarios[i].nombre + " Sea bienvenido al sistema de la "+ this.title);
+        this.rutas.navigate(['/Home'])
+
         return;
       }
       alert("Usuario y contraseña incorrecta");
