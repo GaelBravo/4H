@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class Eje1Component {
 
+  protected title: string = 'Empresa de Rubí SA de CV';
+  protected email: string = '';
+  protected password: string = '';
+  
+  validar(){
+    if(this.email == "Rubi@l.com" && this.password == "1234"){
+      alert("Bienvenido al sistema"+ this.title);
+    } 
+    else{
+      alert("El usuario y/o la contraseña son incorrectos");
+    }
+  }
 }
