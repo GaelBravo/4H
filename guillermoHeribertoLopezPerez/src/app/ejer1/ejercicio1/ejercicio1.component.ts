@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-ejercicio1',
@@ -10,14 +11,24 @@ export class Ejercicio1Component {
   protected correo: string = '';
   protected password: string = '';
 
-  constructor(){}
+  protected usuarios = [
+    { usr: "n@gmail.com", pwd: "123", nombre: "N" },
+    { usr: "guiller@gmail.com", pwd: "guiller123", nombre: "Guillermo" },
+    { usr: "not@gmail.com", pwd: "not123", nombre: "Not" }
+  ];
+
+  constructor(private rutas:Router ){}
 
   public acceso(): void {
-    if(this.correo == "guiller@gmail.com" && this.password == "guiller123"){
-      alert(`Bienvenido al sistema: ${this.title}`);
-    } else {
-      alert("El usuario o la contraseña no son correctos");
+    for (let i = 0; i < this.usuarios.length; i++) {
+      if(this.correo == this.usuarios[i].usr && this.password == this.usuarios[i].pwd){
+        alert(`${this.usuarios[i].nombre} Bienvenido al sistema: ${this.title}`);
+        this.rutas.navigate(["/home"]);
+        return;
+      }
     }
+
+    alert("El usuario o la contraseña no son correctos");
   }
 
   ngOnInit(): void {
