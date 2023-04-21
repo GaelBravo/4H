@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-eje1',
@@ -9,15 +10,26 @@ export class Eje1Component {
   protected title:string ="Empresa de Kevin Uriel SA de CV"
   protected email:string ="";
   protected password:string ="";
+  protected usuarios=[
+    {usr:"uriel123@gmail.com", psw:"uriel123", nombre:"Kevin Uriel"},
+    {usr:"ernesto@l.com", psw:"1234", nombre:"Ernesto"},
+    {usr:"rubi@l.com", psw:"12345", nombre:"Rubi"}
+  ];
+  constructor(private rutas:Router){ }
 
 
   validar(){
-    if(this.email=="uriel123@gmail.com" && this.password=="uriel123"){
-      alert("Bienvenido a la base de datos del sistema de" + this.title);
+    for(let i=0; i<this.usuarios.length; i++){
+      if(this.email==this.usuarios[i].usr && this.password==this.usuarios[i].psw){
+        alert(this.usuarios[i].nombre + " Sea bienvenido al sistema de la "+ this.title);
+        this.rutas.navigate(['/Home'])
+
+        return;
+      }
+      alert("Usuario y contraseña incorrecta");
+
     }
-    else{
-      alert("El usuario y la contraseña son incorrecta");
-    }
+    
   }
 
 }
