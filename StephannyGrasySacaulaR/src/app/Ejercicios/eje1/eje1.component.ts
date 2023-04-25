@@ -9,13 +9,23 @@ export class Eje1Component {
   protected title:string = 'Empresa de Stephanny Grasy 7N';
   protected email:string = '';
   protected password:string = '';
+  protected usuarios = [
+                          {usr:"pizza@l.com", psw: "1234"},
+                          {usr:"paydequeso@l.com", psw:"12345"},
+                          {usr: "aguadehorchata@l.com", psw: "123456"}
+                        ];
 
   validar(){
-    if(this.email=="stephanny@l.com" && this.password == "1703M"){
-      alert("bienvenido al sistema ʕ·ᴥ·ʔ " + this.title);
-    }else{
-      alert("El usuario y la contraseña no son correctos ᶘᵒᴥᵒᶅ");
+    for(let i=0; i<this.usuarios.length; i++){
+
+      if(this.email==this.usuarios[i].usr && this.password == this.usuarios[i].psw){
+        alert("bienvenido al sistema ʕ·ᴥ·ʔ " + this.title);
+        return;
+      
+      }
     }
+
+    alert("El usuario y la contraseña no son correctos ᶘᵒᴥᵒᶅ");
 
   }
 
