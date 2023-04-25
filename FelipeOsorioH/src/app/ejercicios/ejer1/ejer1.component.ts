@@ -24,6 +24,6 @@ export class Ejer1Component {
       }
 
     }
-      alert("el usuario y la contraseña no coinciden: (");
+      alert("el usuario y la contraseña no coinciden: ");
      }
   }
