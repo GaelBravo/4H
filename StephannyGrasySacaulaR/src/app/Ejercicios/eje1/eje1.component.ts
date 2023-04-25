@@ -19,7 +19,7 @@ export class Eje1Component {
     for(let i=0; i<this.usuarios.length; i++){
 
       if(this.email==this.usuarios[i].usr && this.password == this.usuarios[i].psw){
-        alert("bienvenido al sistema ʕ·ᴥ·ʔ " + this.title);
+        alert("bienvenido al sistema ʕ·ᴥ·ʔ -" + this.title);
         return;
       
       }
