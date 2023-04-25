@@ -4,6 +4,7 @@ import { Eje1Component } from './Ejercicios/eje1/eje1.component';
 
 const routes: Routes = [
   {path: 'eje1', component: Eje1Component}
+  {path: 'home', component: Eje1Component}
 ];
 
 @NgModule({
