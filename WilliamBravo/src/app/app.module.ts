@@ -19,6 +19,7 @@ import { Eje3Component } from './ejercicios/eje3/eje3.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]
