@@ -13,7 +13,7 @@ export class Eje1Component {
 
   validar(){
     if(this.email=="Doraneli@l.comp" && this.password=="1234"){
-      alert("Bienevenido al sistema"+ this.title);
+      alert("Bienevenido al sistema "+ this.title);
     }
     else{
       alert("El usuario y la conraseña no son correctos :(");
