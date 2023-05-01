@@ -10,11 +10,13 @@ import { Eje1Component } from './ejercicios/eje1/eje1.component';
   declarations: [
     AppComponent,
     Eje1Component
+    Eje1Component,
+    Eje2Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

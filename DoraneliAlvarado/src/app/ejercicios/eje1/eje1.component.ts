@@ -10,13 +10,20 @@ export class Eje1Component {
   protected title:string = 'Empresa de Doraneli SA DE CV';
   protected email:string = '';
   protected password:string = '';
+  protected usuarios =[
+                       {usr:"Ernesto@l.com",psw:"1234",nombre:"Ernesto Vergara Ortiz"},
+                       {usr:"Maria@l.com",psw:"12345",nombre:"Maria Murillo Alvarado"},
+                       {usr:"Murcia@l.com",psw:"123456",nombre:" Monica Murcia Liborio"}
+                      ];
+
 
   validar(){
-    if(this.email=="Doraneli@l.comp" && this.password=="1234"){
-      alert("Bienevenido al sistema "+ this.title);
+    for(let i=0; i<this.usuarios.length; i++){
+      if(this.email==this.usuarios[i].usr && this.password==this.usuarios[i].psw){
+        alert(this.usuarios[i].nombre+" Bienvenido al sistema de la "+ this.title);
+        return;
+      }
     }
-    else{
-      alert("El usuario y la conraseña no son correctos :(");
-    }
+   alert("Usuario y contraseña incorrectos");
   }
 }
