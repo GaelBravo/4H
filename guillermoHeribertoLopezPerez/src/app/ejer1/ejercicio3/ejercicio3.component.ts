@@ -8,35 +8,47 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class Ejercicio3Component {
   protected title: string = "Empresa de Guillermo SA de CV";
-  passwordForm: FormGroup;
+  protected passwordForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
     this.passwordForm = this.fb.group({
-      password: [
-        '', [
+      password: ['', [
           Validators.required,
-          Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]-$'),
+          Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$'),
           Validators.minLength(8)
-        ]
-      ],
-      email:['',[
-        Validators.required,
-        Validators.pattern(''),
-        Validators.minLength(8)
       ]],
-      confirmacionPassword:['',[Validators.required]],
-      nombre:['', [Validators.required]],
-      lastName:['', [Validators.required]],
-      age:['', [Validators.required]],
-      phone:['', [Validators.required]]
+
+      confirmacionPassword:['',[
+        Validators.required
+      ]],
+
+      email:['',[
+        Validators.email,
+      ]],
+
+      nombre:['', [
+        Validators.required
+      ]],
+
+      lastName:['', [
+        Validators.required
+      ]],
+
+      age:['', [
+        Validators.required
+      ]],
+
+      phone:['', [
+        Validators.required
+      ]]
     },
-    { validator: this.confirmaPassword }
+    { validate: this.confirmaPassword }
     );
   }
 
-  onSubmit(){
-    if(this.passwordForm.valid){
-      alert("Formulario Enviado");
-    }
+  protected confirmaPassword(passwordForm: FormGroup){
+    const pass = passwordForm.get('password')?.value || '';
+    const confirmaPass = passwordForm.get('confirmaPassword')?.value || '';
+    return pass === confirmaPass ? null : { noSonIguales: true };
   }
 }
