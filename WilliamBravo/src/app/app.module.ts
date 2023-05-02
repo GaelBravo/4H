@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Ejer1Component } from './ejercicios/ejer1/ejer1.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Eje2Component } from './ejercicios/eje2/eje2.component';
 import { Eje3Component } from './ejercicios/eje3/eje3.component';
 
@@ -19,7 +19,7 @@ import { Eje3Component } from './ejercicios/eje3/eje3.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormModule
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
