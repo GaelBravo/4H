@@ -93,28 +93,43 @@
                                         <div class="mb-3">
                                             <label for="" class="form-label">Email *</label>
                                             <input type="email" class="form-control" name="" id=""
-                                                aria-describedby="emailHelpId" placeholder="abc@mail.com" formControlName="email">
+                                                aria-describedby="emailHelpId" placeholder="abc@mail.com"
+                                                formControlName="email">
                                             <small id="emailHelpId" class="form-text text-muted">Help text</small>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col mb-6 mb-3">
-                                            <div class="mb-3">
-                                                <label for="" class="form-label">Password *</label>
-                                                <input type="password" class="form-control" name="" id="" placeholder="" formControlName="password">
-                                                <div *ngIf="passwordForm.controls['password'].errors?.['pattern']">
-                                                    La contraseña debe tener al menos 8 caracteres, una letra mayuscua, una letra minuscula y número.
+                                </div>
+                                <div class="row">
+                                    <div class="col d-flex justify-content-between">
+                                        <div class="row">
+                                            <div class="col mb-6 mb-3">
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Password *</label>
+                                                    <input type="password" class="form-control" name="" id=""
+                                                        placeholder="" formControlName="password">
+                                                    <div *ngIf="passwordForm.get('password')?.invalid && passwordForm.get('password')?.touched" class="alert alert-danger">
+                                                            La contraseña debe tener al menos 8 caracteres, una letra
+                                                            mayuscua, una letra minuscula y número.
+                                                    </div>
                                                 </div>
-                                                <div *ngIf="!(passwordForm.controls['password'].errors?.['pattern']) && getpassword()!=''">
-                                                    <i class="">Correcto!</i>
+                                            </div>
+
+                                            <div class="col mb-6 mb-3">
+                                                <div class="mb-3">
+                                                    <label for="" class="form-label">Confirma Password *</label>
+                                                    <input type="password" class="form-control" name="" id=""
+                                                        placeholder="" formControlName="confirmacionPassword">
+                                                    <div *ngIf="passwordForm" class="alert alert-danger">
+                                                            La contraseña no Coincide
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-grid gap-2 col-6 mx-auto">
+                                <div class="card-footer">
                                     <button type="submit" class="btn btn-primary"
-                                        [disabled]="!passwordForm.valid">Enviar</button>
+                                        [disabled]="!passwordForm.hasValidator">Enviar</button>
                                 </div>
                             </div>
                         </form>
@@ -123,3 +138,4 @@
             </div>
         </div>
     </div>
+</div>
