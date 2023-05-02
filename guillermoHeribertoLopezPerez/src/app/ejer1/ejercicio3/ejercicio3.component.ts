@@ -1,16 +1,15 @@
-import { group } from '@angular/animations';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-eje3',
-  templateUrl: './eje3.component.html',
-  styleUrls: ['./eje3.component.css']
+  selector: 'app-ejercicio3',
+  templateUrl: './ejercicio3.component.html',
+  styleUrls: ['./ejercicio3.component.css']
 })
-export class Eje3Component {
-  protected title: string = "Empresa de Xolio SA de CV";
+export class Ejercicio3Component {
+  protected title: string = "Empresa de Guillermo SA de CV";
   passwordForm: FormGroup;
- 
+
   constructor(private fb: FormBuilder) {
     this.passwordForm = this.fb.group({
       password: [
@@ -31,17 +30,13 @@ export class Eje3Component {
       age:['', [Validators.required]],
       phone:['', [Validators.required]]
     },
-
-         { validator: this.ConfirmaPassword }
+    { validator: this.confirmaPassword }
     );
-}
+  }
+
   onSubmit(){
     if(this.passwordForm.valid){
       alert("Formulario Enviado");
     }
-  }
-  getpassword() {
-    let valor = this.passwordForm.get('password')?.value || '';
-    return valor;
   }
 }

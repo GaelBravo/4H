@@ -6,8 +6,7 @@
                 <div class="card-header">
                     <h3>Registro al sistema de la empresa {{title}}</h3>
                     <div class="card-body">
-                        <form [formGroup]="passwordForm" (submit)="onSubmit()">
-
+                        <form [formGroup]="passwordForm">
                             <div class="row">
                                 <div class="col d-flex justify-content-between">
                                     <div class="mb-3">
@@ -105,8 +104,9 @@
                                                 <input type="password" class="form-control" name="" id="" placeholder="" formControlName="password">
                                                 <div *ngIf="passwordForm.controls['password'].errors?.['pattern']">
                                                     La contraseña debe tener al menos 8 caracteres, una letra mayuscua, una letra minuscula y número.
-                                                <div *ngIf="!passwordForm.controls['password'].errors?.['pattern']">
-                                                    <i class="fas fa-check">Correcto!</i>
+                                                </div>
+                                                <div *ngIf="!(passwordForm.controls['password'].errors?.['pattern']) && getpassword()!=''">
+                                                    <i class="">Correcto!</i>
                                                 </div>
                                             </div>
                                         </div>
@@ -116,7 +116,6 @@
                                     <button type="submit" class="btn btn-primary"
                                         [disabled]="!passwordForm.valid">Enviar</button>
                                 </div>
-                            </div>
                             </div>
                         </form>
                     </div>
