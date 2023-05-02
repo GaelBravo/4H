@@ -119,8 +119,11 @@
                                                     <label for="" class="form-label">Confirma Password *</label>
                                                     <input type="password" class="form-control" name="" id=""
                                                         placeholder="" formControlName="confirmacionPassword">
-                                                    <div *ngIf="passwordForm" class="alert alert-danger">
+                                                    <div *ngIf="passwordForm.errors?.['noSonIguales'] && passwordForm.controls['confirmaPassword'].dirty" class="alert alert-danger">
                                                             La contraseña no Coincide
+                                                    </div>
+                                                    <div *ngIf="!(passwordForm.errors?.['noSonIguales'] && passwordForm.controls['confirmaPassword'].dirty)">
+                                                        <i class="fa fa-check"></i>
                                                     </div>
                                                 </div>
                                             </div>
