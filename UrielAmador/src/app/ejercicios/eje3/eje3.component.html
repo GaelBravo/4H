@@ -6,14 +6,14 @@
                 <div class="card-header">
                     <h3>Registro al sistema de la {{title}}</h3>
                 <div class="card-body">
-                    <form [formGroup]="passwordForm">
+                    <form [formGroup]="formulario">
                     <div class="row">
                         <div class="col d-flex justify-content-between">
                             <div class="mb-3">
                                 <label for="" class="form-label">Name</label>
                                 <input type="text"
                                     class="form-control" name="" id=""
-                                    aria-describedby="helpId" placeholder="">
+                                    aria-describedby="helpId" placeholder="" formcControlName="nombre">
                                 <small id="helpId" class="form-text text-muted">Help
                                     text</small>
                             </div>
@@ -119,7 +119,7 @@
                                     <input type="email" class="form-control"
                                         name=""
                                         id="" aria-describedby="emailHelpId"
-                                        placeholder="abc@mail.com">
+                                        placeholder="abc@mail.com" formControlName="correo">
                                     <small id="emailHelpId" class="form-text
                                         text-muted">Help text</small>
                                 </div>
@@ -127,12 +127,25 @@
                                     <label for="" class="form-label">Password</label>
                                     <input type="password" class="form-control"
                                         name=""
-                                        id="" placeholder="">
+                                        id="" placeholder="" formControlName="password">
+                                        <div *ngIf="formulario.get('password')?.invalid &&
+                                                    formulario.get('password')?.touched"
+                                                    class="alert alert-danger">El password es obligatorio y debe de tener al menos 8 caracteres, debe incluir por lo menos una letra mayuscula y un numero</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Confirma Password</label>
+                                    <input type="password" class="form-control"
+                                        name=""
+                                        id="" placeholder="" formControlName="confirmapassword"><div *ngIf="formulario.get('confirmaPassword')?.invalid && formulario.get('confirmaPassword')?.touched" class="alert alert-danger">El password no coincide</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     </form>
+                </div>
+                <div class="card-footer">
+                    <button type="button"
+                        [disabled]="!formulario.valid" class="btn btn-primary">Registrar</button>
                 </div>
             </div>
         </div>
