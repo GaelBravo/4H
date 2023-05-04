@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Ejer2Component } from './ejercicio/ejer2/ejer2.component';
 import { Ejer3Component } from './ejercicio/ejer3/ejer3.component';
 import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
+import { ActivatedRoute } from '@angular/router';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
