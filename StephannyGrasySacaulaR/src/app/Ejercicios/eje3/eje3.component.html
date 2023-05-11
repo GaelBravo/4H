@@ -6,21 +6,20 @@
                 <div class="card-header">
                     <h3>Registro al sistema de la {{title}}</h3>
                     <div class="card-body">
-                        <form [formGroup] = "passwordForm">
+                        <form [formGroup]="formulario">
                             <div class="row">
                                 <div class="col d-flex justify-content-between">
                                     <div class="mb-3">
                                         <label for="nombre" class="form-label">Name</label>
-                                <input type="text"
-                                    class="form-control" name="" id="nombre"
-                                    aria-describedby="helpId" placeholder="">
-                                <small id="helpId" class="form-text text-muted">Help
-                                    text</small>
+                                        <input type="text" class="form-control" name="" id="nombre"
+                                            aria-describedby="helpId" placeholder="">
+                                        <small id="helpId" class="form-text text-muted">Help
+                                            text</small>
                                     </div>
                                     <div class="mb-3">
                                         <label for="ape" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" name="" id="ape" aria-describedby="helpId"
-                                            placeholder="">
+                                        <input type="text" class="form-control" name="" id="ape"
+                                            aria-describedby="helpId" placeholder="">
                                         <small id="helpId" class="form-text text-muted">Help
                                             text</small>
                                     </div>
@@ -106,16 +105,58 @@
                                             <small id="emailHelpId" class="form-text
                                         text-muted">Help text</small>
                                         </div>
+
+
+
+
+
+
+
+
                                         <div class="mb-3">
-                                            <label for="contra" class="form-label">Password</label>
-                                            <input type="password" class="form-control" name="" id="contra"
-                                                placeholder="">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" name="" id="password"
+                                                placeholder="" formControlName="password">
+                                            <div *ngIf="formulario.get('password')?.invalid && formulario.get('password')?.touched"
+                                                class="alert alert-danger">El
+                                                password es obligatorio y
+                                                debe de tener al menos 8
+                                                caracteres, debe incluir por
+                                                lo menos una letra mayuscula
+                                                y un numero
+                                            </div>
+
                                         </div>
+
+
+
+                                        <div class="mb-3">
+                                            <label for="pass" class="form-label">Confirma Password</label>
+                                            <input type="password" class="form-control" name="" id="pass" placeholder=""
+                                                formControlName="confirmaPassword">
+                                            <div
+                                                *ngIf="formulario.get('confirmaPassword')?.invalid && formulario.get('confirmaPassword')?.touched">
+                                                La contraseña no coincide
+                                            </div>
+
+
+
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="card-footer">
+                                <button type="button" [disabled]="!formulario.valid"
+                                    class="btn btn-primary">Registrar</button>
+
+                            </div>
+
+
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>
