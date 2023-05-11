@@ -17,12 +17,7 @@ export class Eje3Component {
         Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$'),
         Validators.maxLength(8)
       ]],
-      email:['',[
-        Validators.required,
-        Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]=$'),
-        Validators.minLength(8)
-      ]],
-      
+    
       confirmaPassword: ['', [
         Validators.required,
       ]],
@@ -31,6 +26,33 @@ export class Eje3Component {
         Validators.email,
       ]],
       nombre: ['', [
+        Validators.required,
+      ]],
+      apellido: ['',[
+        Validators.required,
+      ]],
+      edad: ['', [
+        Validators.required,
+      ]],
+      telefono: ['', [
+        Validators.required,
+      ]],
+      direccion: ['',[
+        Validators.required,
+      ]],
+      ciudad: ['',[
+        Validators.required,
+      ]],
+      estado: ['', [
+        Validators.required,
+      ]],
+      pais: ['',[
+        Validators.required,
+      ]],
+      codigoPostal:['', [
+        Validators.required,
+      ]],
+      fecha: ['',[
         Validators.required,
       ]],
 
