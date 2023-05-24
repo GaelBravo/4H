@@ -8,14 +8,21 @@ import { Component } from '@angular/core';
 export class Eje1Component {
   protected title: string = "Empresa de Angel SA de CV";
 
-  public email: string = "";
-  public password: string = "";
+  protected email: string = "";
+  protected password: string = "";
+  protected usuarios = [
+                        {usr:"fernando@l.com",psw:"1234",nombre:"Angel Vera Ortiz"},
+                        {usr:"rubi@l.com",psw:"12345",nombre:"Rubi Ruiz Ramiez"},
+                        {usr:"murcia@l.com",psw:"123456",nombre:"Monica Murcia Liborio"}
+                      ];
 
   public validar() : void{
-    if(this.email == "fernando.com" && this.password == "1234"){
-      alert("Bienvenido al sistema " + this.title);
-    }
-    else{
+    for(let i = 0; i <this.usuarios.length; i++){
+      if(this.email == this.usuarios[i].usr && this.password == this.usuarios[i].psw){
+        alert("Bienvenido al sistema " + this.title);
+        return;
+      }
+        
       alert("El usuario o la contraseña no son correctas");
     }
   }
