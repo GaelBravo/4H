@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./eje1.component.css']
 })
 export class Eje1Component {
+  protected title: string = "Empresa de Angel SA de CV";
 
+  public email: string = "";
+  public password: string = "";
+
+  public validar() : void{
+    if(this.email == "fernando.com" && this.password == "1234"){
+      alert("Bienvenido al sistema " + this.title);
+    }
+    else{
+      alert("El usuario o la contraseña no son correctas");
+    }
+  }
 }
