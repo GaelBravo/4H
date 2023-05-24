@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-eje3',
@@ -10,10 +10,12 @@ export class Eje3Component {
   protected title: string = "Empresa de Angel SA de CV";
   passwordForm: FormGroup;
   constructor(private formbuilder: FormBuilder){
-    password: ['',[
-      Validators.required,
-      Validators.pattern('^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]=$'),
-    ]
-  ];
+    this.passwordForm = this.formbuilder.group({
+      password: ['',[
+        Validators.required,
+        Validators.pattern('^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]=$'),
+        Validators.minLength(8),
+      ]]
+    });
   }
 }
