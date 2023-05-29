@@ -1,6 +1,5 @@
-import { group } from '@angular/animations';
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-eje3',
@@ -8,40 +7,58 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./eje3.component.css']
 })
 export class Eje3Component {
-  protected title: string = "Empresa de Xolio SA de CV";
-  passwordForm: FormGroup;
- 
-  constructor(private fb: FormBuilder) {
-    this.passwordForm = this.fb.group({
-      password: [
-        '', [
+  protected title: string = "Empresa de Xolio SA de CV"
+  protected formulario: FormGroup;
+  constructor(private formbuilder: FormBuilder) {
+    this.formulario = this.formbuilder.group({
+
+      password: ['', [
           Validators.required,
-          Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]-$'),
+          Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$'),
           Validators.minLength(8)
         ]
       ],
-      email:['',[
-        Validators.required,
-        Validators.pattern(''),
-        Validators.minLength(8)
-      ]],
-      confirmacionPassword:['',[Validators.required]],
-      nombre:['', [Validators.required]],
-      lastName:['', [Validators.required]],
-      age:['', [Validators.required]],
-      phone:['', [Validators.required]]
-    },
-
-         { validator: this.ConfirmaPassword }
-    );
+    confirmaPassword:['',[
+      Validators.required
+    ]],
+    correo:['',[
+      Validators.required,
+      Validators.email
+    ]],
+    nombre:['',[
+      Validators.required
+    ]],
+    edad:['',[
+      Validators.required
+    ]],
+    telefono:['',[
+      Validators.required
+    ]],
+    direccion:['',[
+      Validators.required
+    ]],
+    ciudad:['',[
+      Validators.required
+    ]],
+    estado:['',[
+      Validators.required
+    ]],
+    pais:['',[
+      Validators.required
+    ]],
+    codigoPostal:['',[
+      Validators.required
+    ]],
+    fecha:['',[
+      Validators.required
+    ]]
+},
+ {Validators: this.passwordsIguales});
 }
-  onSubmit(){
-    if(this.passwordForm.valid){
-      alert("Formulario Enviado");
-    }
-  }
-  getpassword() {
-    let valor = this.passwordForm.get('password')?.value || '';
-    return valor;
+protected passwordsIguales(formGroup: FormGroup){
+const pass= formGroup.get('password')?.value || '';
+const confirmaPass = formGroup.get('confirmaPassword')?.value || '';
+return pass === confirmaPass? null : {noSonIguales: true};
+
   }
 }
