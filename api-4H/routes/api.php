@@ -32,4 +32,4 @@ Route::delete("productos/{producto}", "App\Http\Controllers\ProductosController@
 
 Route::post("ventas", "App\Http\Controllers\VentasController@store");
 
-Route::get("ListadoUsuarios", "App\Http\Controllers\UserController@index");//utilizado enviar todos los usuarios a un frontend.
+Route::get("ListadoUsuarios", "App\Http\Controllers\UserController@index");//utilizado para enviar todos los usuarios a un frontend.
